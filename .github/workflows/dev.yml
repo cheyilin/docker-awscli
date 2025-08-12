@@ -34,7 +34,7 @@ jobs:
           - 5000:5000
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Docker Metadata
         id: meta
         uses: docker/metadata-action@v5
