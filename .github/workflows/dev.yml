@@ -90,7 +90,7 @@ jobs:
           ${CMD} aws --version
       - name: Comment
         if: ${{ github.actor != 'dependabot[bot]' }}
-        uses: peter-evans/commit-comment@v3
+        uses: peter-evans/commit-comment@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
