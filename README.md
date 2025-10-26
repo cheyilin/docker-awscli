@@ -2,7 +2,7 @@
 
 Docker in Docker image with AWS CLI v1/v2 support
 
-Upstream releases: [github.com/aws/aws-cli](https://github.com/aws/aws-cli/releases)
+Upstream releases: [github.com/aws/aws-cli](https://github.com/aws/aws-cli/tags)
 
 [![GitHub Release Date](https://img.shields.io/github/release-date/cheyilin/docker-awscli)](https://github.com/CheyiLin/docker-awscli/releases)
 
