@@ -1,19 +1,19 @@
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 
 LABEL maintainer="Cheyi Lin <cheyi.lin@gmail.com>"
 
 ARG TARGETOS
 ARG TARGETARCH
 
-ARG DOCKER_DL_BASE=https://download.docker.com/linux/ubuntu/dists/focal/pool/stable
+ARG DOCKER_DL_BASE=https://download.docker.com/linux/ubuntu/dists/noble/pool/stable
 
-ARG DOCKER_VERSION=24.0.7
+ARG DOCKER_VERSION=28.5.1
 ENV DOCKER_VERSION=${DOCKER_VERSION}
 
-ARG DOCKER_BUILDX_VERSION=0.11.2
+ARG DOCKER_BUILDX_VERSION=0.29.1
 ENV DOCKER_BUILDX_VERSION=${DOCKER_BUILDX_VERSION}
 
-ARG DOCKER_COMPOSE_VERSION=2.21.0
+ARG DOCKER_COMPOSE_VERSION=2.40.2
 ENV DOCKER_COMPOSE_VERSION=${DOCKER_COMPOSE_VERSION}
 
 ARG AWS_CLI_VERSION=2.13.3
@@ -27,11 +27,11 @@ RUN apt-get update; \
     update-ca-certificates; \
     \
     curl -SfL -o /tmp/docker-ce-cli.deb \
-        "${DOCKER_DL_BASE}/${TARGETARCH}/docker-ce-cli_${DOCKER_VERSION}-1~ubuntu.20.04~focal_${TARGETARCH}.deb"; \
+        "${DOCKER_DL_BASE}/${TARGETARCH}/docker-ce-cli_${DOCKER_VERSION}-1~ubuntu.24.04~noble_${TARGETARCH}.deb"; \
     curl -SfL -o /tmp/docker-buildx-plugin.deb \
-        "${DOCKER_DL_BASE}/${TARGETARCH}/docker-buildx-plugin_${DOCKER_BUILDX_VERSION}-1~ubuntu.20.04~focal_${TARGETARCH}.deb"; \
+        "${DOCKER_DL_BASE}/${TARGETARCH}/docker-buildx-plugin_${DOCKER_BUILDX_VERSION}-1~ubuntu.24.04~noble_${TARGETARCH}.deb"; \
     curl -SfL -o /tmp/docker-compose-plugin.deb \
-        "${DOCKER_DL_BASE}/${TARGETARCH}/docker-compose-plugin_${DOCKER_COMPOSE_VERSION}-1~ubuntu.20.04~focal_${TARGETARCH}.deb"; \
+        "${DOCKER_DL_BASE}/${TARGETARCH}/docker-compose-plugin_${DOCKER_COMPOSE_VERSION}-1~ubuntu.24.04~noble_${TARGETARCH}.deb"; \
     dpkg -i /tmp/docker-ce-cli.deb /tmp/docker-buildx-plugin.deb /tmp/docker-compose-plugin.deb; \
     rm -f /tmp/docker-*.deb; \
     \

@@ -1,4 +1,4 @@
-ARG DOCKER_VERSION=24.0.7
+ARG DOCKER_VERSION=28.5.1
 
 # dind variant includes git and the git variant is deprecated.
 # https://github.com/docker-library/docker/pull/483
