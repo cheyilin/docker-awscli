@@ -21,9 +21,9 @@ jobs:
       matrix:
         include:
           - ctx: v1
-            version: "1.44.53"
+            version: "1.46.1"
           - ctx: v2
-            version: "2.34.4"
+            version: "2.37.13"
     env:
       BUILD_PLATFORMS: linux/amd64,linux/arm64
       DOCKER_VERSION: "28.5.1"
