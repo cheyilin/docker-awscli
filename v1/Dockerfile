@@ -1,4 +1,4 @@
-ARG DOCKER_VERSION=28.5.1
+ARG DOCKER_VERSION=29.8.2
 
 # dind variant includes git and the git variant is deprecated.
 # https://github.com/docker-library/docker/pull/483
@@ -6,7 +6,7 @@ FROM docker:${DOCKER_VERSION}-dind
 
 LABEL maintainer="Cheyi Lin <cheyi.lin@gmail.com>"
 
-ARG AWS_CLI_VERSION=1.29.10
+ARG AWS_CLI_VERSION=1.46.1
 ENV AWS_CLI_VERSION=${AWS_CLI_VERSION}
 
 SHELL ["/bin/ash", "-euxo", "pipefail", "-c"]
